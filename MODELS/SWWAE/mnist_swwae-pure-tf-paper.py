@@ -47,7 +47,9 @@ https://arxiv.org/abs/1603.05027v3
 from __future__ import print_function
 import numpy as np
 import tqdm
+import torch
 
+# print(torch.__version__)
 import tensorflow as tf
 
 from tensorflow.examples.tutorials.mnist import input_data
