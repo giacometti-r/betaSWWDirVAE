@@ -1,0 +1,62 @@
+TensorFlow 2.0 Upgrade Script
+-----------------------------
+Converted 1 files
+Detected 5 issues that require attention
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+File: nvdm_dirichlet_invCDF.py
+--------------------------------------------------------------------------------
+nvdm_dirichlet_invCDF.py:58:22: ERROR: Using member tf.contrib.layers.batch_norm in deprecated module tf.contrib. tf.contrib.layers.batch_norm cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+nvdm_dirichlet_invCDF.py:86:41: ERROR: Using member tf.contrib.layers.batch_norm in deprecated module tf.contrib. tf.contrib.layers.batch_norm cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+nvdm_dirichlet_invCDF.py:89:17: ERROR: Using member tf.contrib.distributions.Dirichlet in deprecated module tf.contrib. tf.contrib.distributions.Dirichlet cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+nvdm_dirichlet_invCDF.py:90:17: ERROR: Using member tf.contrib.distributions.Dirichlet in deprecated module tf.contrib. tf.contrib.distributions.Dirichlet cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+nvdm_dirichlet_invCDF.py:266:6: WARNING: *.save requires manual check. (This warning is only applicable if the code saves a tf.Keras model) Keras model.save now saves to the Tensorflow SavedModel format by default, instead of HDF5. To continue saving to HDF5, add the argument save_format='h5' to the save() function.
+================================================================================
+Detailed log follows:
+
+================================================================================
+--------------------------------------------------------------------------------
+Processing file 'nvdm_dirichlet_invCDF.py'
+ outputting to 'nvdm_dirichlet_invCDF_UPDATED.py'
+--------------------------------------------------------------------------------
+
+14:0: INFO: Renamed 'tf.set_random_seed' to 'tf.compat.v1.set_random_seed'
+16:8: INFO: Renamed 'tf.app.flags' to 'tf.compat.v1.app.flags'
+37:8: INFO: Renamed 'tf.reset_default_graph' to 'tf.compat.v1.reset_default_graph'
+47:17: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+48:20: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+49:23: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+52:25: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+53:25: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+55:13: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+57:25: INFO: Changing keep_prob arg of tf.nn.dropout to rate, and recomputing value.
+
+58:22: ERROR: Using member tf.contrib.layers.batch_norm in deprecated module tf.contrib. tf.contrib.layers.batch_norm cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+59:49: INFO: Renamed 'tf.log' to 'tf.math.log'
+64:32: INFO: Renamed 'tf.lgamma' to 'tf.math.lgamma'
+64:76: INFO: Renamed 'tf.lgamma' to 'tf.math.lgamma'
+65:45: INFO: Renamed 'tf.lgamma' to 'tf.math.lgamma'
+66:45: INFO: Renamed 'tf.lgamma' to 'tf.math.lgamma'
+68:49: INFO: Renamed 'tf.digamma' to 'tf.math.digamma'
+68:83: INFO: Renamed 'tf.digamma' to 'tf.math.digamma'
+73:13: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+75:16: INFO: Renamed 'tf.random_uniform' to 'tf.random.uniform'
+76:17: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+78:58: INFO: Renamed 'tf.lgamma' to 'tf.math.lgamma'
+80:31: INFO: Renamed 'tf.div' to 'tf.compat.v1.div'
+84:23: INFO: Renamed 'tf.log' to 'tf.math.log'
+86:41: ERROR: Using member tf.contrib.layers.batch_norm in deprecated module tf.contrib. tf.contrib.layers.batch_norm cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+89:17: ERROR: Using member tf.contrib.distributions.Dirichlet in deprecated module tf.contrib. tf.contrib.distributions.Dirichlet cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+90:17: ERROR: Using member tf.contrib.distributions.Dirichlet in deprecated module tf.contrib. tf.contrib.distributions.Dirichlet cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+92:30: INFO: Renamed 'tf.arg_max' to 'tf.argmax'
+101:19: INFO: Renamed 'tf.trainable_variables' to 'tf.compat.v1.trainable_variables'
+123:20: INFO: Renamed 'tf.train.AdamOptimizer' to 'tf.compat.v1.train.AdamOptimizer'
+213:39: INFO: Renamed 'tf.trainable_variables' to 'tf.compat.v1.trainable_variables'
+266:6: WARNING: *.save requires manual check. (This warning is only applicable if the code saves a tf.Keras model) Keras model.save now saves to the Tensorflow SavedModel format by default, instead of HDF5. To continue saving to HDF5, add the argument save_format='h5' to the save() function.
+266:6: INFO: Renamed 'tf.train.Saver' to 'tf.compat.v1.train.Saver'
+278:10: INFO: Renamed 'tf.train.Saver' to 'tf.compat.v1.train.Saver'
+393:11: INFO: Renamed 'tf.Session' to 'tf.compat.v1.Session'
+394:11: INFO: Renamed 'tf.global_variables_initializer' to 'tf.compat.v1.global_variables_initializer'
+404:4: INFO: Renamed 'tf.app.run' to 'tf.compat.v1.app.run'
+--------------------------------------------------------------------------------
+
